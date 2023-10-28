@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const app = require("../app");
 
 const { PORT = 1594, DB_HOST } = process.env;
+console.log(PORT);
 // const { DB_HOST } = process.env;
 // const DB_HOST = process.env.MONGODB_URI;
 // const client = new MongoClient(process.env["ATLAS_URI"]);

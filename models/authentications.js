@@ -58,20 +58,6 @@ const authSchema = Schema(
             default: "light",
             enum: theme,
         },
-        additionalColumn: {
-            workerInfo: {
-                type: String,
-                default: null,
-            },
-            updatedAt: {
-                type: Date,
-                default: Date.now,
-            },
-        },
-        comment: {
-            type: String,
-            default: null,
-        },
     },
     {
         versionKey: false,
@@ -115,8 +101,6 @@ const joiSignUpSchema = Joi.object({
     phoneNumber: Joi.string().min(9).max(13).required(),
     language: Joi.string().valid(...lang),
     theme: Joi.string().valid(...theme),
-    comment: Joi.string(),
-    additionalColumn: { workerInfo: Joi.string() },
 });
 
 const joiLogInEmailSchema = Joi.object({
@@ -160,8 +144,6 @@ const joiUpdateSchema = Joi.object({
     phoneNumber: Joi.string().min(9).max(13),
     language: Joi.string().valid(...lang),
     theme: Joi.string().valid(...theme),
-    comment: Joi.string(),
-    additionalColumn: { workerInfo: Joi.string() },
 });
 
 const joiSearchSchema = Joi.object({

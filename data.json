@@ -1,0 +1,10 @@
+{
+    "name": "Admin",
+    "surname": "Admin",
+    "email": "admin@example.com",
+    "password": "Aa@1Bb@2",
+    "phoneNumber": "+1234567890",
+    "language": "ua",
+    "theme": "light",
+    "username": "admin"
+}
